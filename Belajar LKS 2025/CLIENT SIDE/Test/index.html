@@ -22,7 +22,12 @@
           alt=""
         />
         <form action="">
-          <input type="text" placeholder="Input Username" id="name" onchange="togglePlayBtn()"/>
+          <input
+            type="text"
+            placeholder="Input Username"
+            id="name"
+            onchange="togglePlayBtn()"
+          />
           <select name="level" id="level">
             <option value="" disabled selected>Select Your Level</option>
             <option value="Easy">Easy</option>
@@ -49,18 +54,38 @@
           <div class="gunType hidden" id="gunType">
             <div class="item">
               <label for="gun">
-                <img src="../MODULE_CLIENT_MEDIA/Sprites/gun1.png" alt="" id="gun1"/>
+                <img
+                  src="../MODULE_CLIENT_MEDIA/Sprites/gun1.png"
+                  alt=""
+                  id="gun1"
+                />
               </label>
-              <input type="radio" name="gun" id="gun1" value="gun1" onchange="updateGunType()"/>
+              <input
+                type="radio"
+                name="gun"
+                id="gun1"
+                value="gun1"
+                onchange="updateGunAndTargetType()"
+              />
             </div>
             <div class="item">
               <label for="gun">
-                <img src="../MODULE_CLIENT_MEDIA/Sprites/gun2.png" alt="" id="gun2"/>
+                <img
+                  src="../MODULE_CLIENT_MEDIA/Sprites/gun2.png"
+                  alt=""
+                  id="gun2"
+                />
               </label>
-              <input type="radio" name="gun" id="gun2" value="gun2" onchange="updateGunType()" />
+              <input
+                type="radio"
+                name="gun"
+                id="gun2"
+                value="gun2"
+                onchange="updateGunAndTargetType()"
+              />
             </div>
           </div>
-          <div class="btn" id="btnTarget" onclick="openTargetType()" >
+          <div class="btn" id="btnTarget" onclick="openTargetType()">
             Change Target Type
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,52 +104,88 @@
           </div>
           <div class="targetType hidden" id="targetType">
             <div class="item">
-              <img src="../MODULE_CLIENT_MEDIA/Sprites/target1.png" alt="" id="target1" />
-              <input type="radio" name="target" id="target1" value="target1" />
+              <img
+                src="../MODULE_CLIENT_MEDIA/Sprites/target1.png"
+                alt=""
+                id="target1"
+              />
+              <input
+                type="radio"
+                name="target"
+                id="target1"
+                value="target1"
+                onchange="updateGunAndTargetType()"
+              />
             </div>
             <div class="item">
               <label for="target">
-                <img src="../MODULE_CLIENT_MEDIA/Sprites/target2.png" alt="" id="target2"/>
+                <img
+                  src="../MODULE_CLIENT_MEDIA/Sprites/target2.png"
+                  alt=""
+                  id="target2"
+                  onchange="updateGunAndTargetType()"
+                />
               </label>
-              <input type="radio" name="target" id="target2" value="target2" />
+              <input
+                type="radio"
+                name="target"
+                id="target2"
+                value="target2"
+                onchange="updateGunAndTargetType()"
+              />
             </div>
             <div class="item">
               <label for="target">
-                <img src="../MODULE_CLIENT_MEDIA/Sprites/target3.png" alt="" id="target3" />
+                <img
+                  src="../MODULE_CLIENT_MEDIA/Sprites/target3.png"
+                  alt=""
+                  id="target3"
+                />
               </label>
-              <input type="radio" name="target" id="target3" value="target3" />
+              <input
+                type="radio"
+                name="target"
+                id="target3"
+                value="target3"
+                onchange="updateGunAndTargetType()"
+              />
             </div>
           </div>
-          <div class="btnPlay disabled" onclick="startGame()" id="btnPlay">Play</div>
+          <div class="btnPlay disabled" onclick="startGame()" id="btnPlay">
+            Play
+          </div>
         </form>
       </div>
     </div>
 
     <div id="countdown" class="hidden">3</div>
-
+    <!-- harus hidden -->
     <div class="game-container hidden" id="game">
       <div class="topbar">
-        <div id="playerName" class="playerName">
-            
-        </div>
-        <div class="scoreTop">
-            Score : <span>33</span>
-        </div>
-        <div class="time">
-            Time: <span id="timer">05.00</span>
-        </div>
+        <div id="playerName" class="playerName"></div>
+        <div class="scoreTop">Score : <span id="score"></span></div>
+        <div class="time">Time: <span id="timer">05.00</span></div>
       </div>
+      <canvas id="collideCanvas"></canvas>
       <canvas id="canvas"></canvas>
       <div class="sidebar">
         <h4>Leaderboard</h4>
         <div class="item-sidebar">
           <div class="username">
             <div>Thomas</div>
-            <div class="score">score : <span>33</span></div>
+            <div class="score">score : <span id="score"></span></div>
           </div>
           <div class="btnDetail">Details</div>
         </div>
         <div class="line"></div>
+      </div>
+    </div>
+    <div class="gameOver hidden" id="gameOver">
+      Game Over
+      <div class="score flex">
+        Score :  
+
+         <span id="score"> </span>
       </div>
     </div>
 
