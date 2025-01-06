@@ -1,0 +1,136 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-container{
+    background-color: #0A9AF2;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    margin-right: 30px;
+    gap: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.item-menu a{
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.item-menu:hover a{
+    background-color: white;
+    color: #0A9AF2;
+    transition: all ease 200ms;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70vh;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.item-main{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    width: 400px;
+    height: 500px;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid; 
+    box-shadow: 2px 2px 10px;
+    /* background-color: red; */
+}
+
+.place-img{
+    color: white;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+}
+.pura-agung{
+    background-image: url('../Pura Besakih.jpg');
+}
+.derawan{
+    background-image: url('../Kepulauan Derawan.jpg');
+}
+
+.total-view{
+    position: relative;
+    top: 10px;
+    left: 340px;
+}
+
+.title{
+    font-size: 25px;
+    position: relative;
+    top: 120px;
+    left: 20px;
+}
+
+.desc-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+}
+
+.short-description{
+    height: 150px;
+}
+
+.total-comments{
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-morebtn{
+    /* position: absolute; */
+    top: 10px;
+    position: relative;
+    color: white;
+    background-color: #0A9AF2;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.destination{
+    color: #0A9AF2;
+}

@@ -1,0 +1,154 @@
+
+/* css untuk isi game */
+
+/* untuk menaruh game container di tengah */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+/* untuk membuat screen countdown diatas semua dan blur */
+#countdown {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.731);
+  font-size: 5rem;
+  color: white;
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 5px 5px 5px white;
+}
+
+/* mengatur size game container */
+.game-container {
+  width: 1250px;
+  height: 600px;
+  color: white;
+  position: absolute;
+}
+
+/* membuat background untuk game */
+canvas {
+  background-image: url("../MODULE_CLIENT_MEDIA/Sprites/background.jpg");
+  background-size: contain;
+  /* cursor: url('../MODULE_CLIENT_MEDIA/Sprites/pointer.png'), auto; */
+}
+
+/* mengatur agar canvas gambar berada di belakang collide canvas */
+#canvas{
+  z-index: 1;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+}
+#collideCanvas{
+  z-index: 100;
+}
+
+/* mengatur sidebar agar ke samping serta mengatur isi leaderboard */
+.sidebar {
+  position: relative;
+  width: 20%;
+  z-index: 999;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+/* mengatur judul */
+.sidebar h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+
+/* mengatur isi dalam sidebar */
+.item-sidebar {
+  position: relative;
+  top: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* mengatur username */
+.username {
+  text-align: left;
+  font-weight: bold;
+}
+/* mengatur score */
+.score {
+  font-style: italic;
+  font-weight: normal;
+}
+/* mengatur btn untuk detail */
+.btnDetail {
+  background-color: red;
+  color: white;
+  width: 80px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* memberi animasi */
+.btnDetail:hover {
+  background-color: white;
+  color: red;
+  transition: all ease-in 250ms;
+  cursor: pointer;
+}
+
+/* membuat sebuah garis untuk pemisah */
+.line {
+  position: relative;
+  top: 20px;
+  width: 90%;
+  margin: 10px;
+  height: 4px;
+  background-color: white;
+}
+
+/* mengatur agar top bar berada di depan semuanya dan efek blur  */
+.topbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    font-weight: bold;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+/* membuat screen game over berada di depan segalanya sehingga memenuhi screen */
+.gameOver{
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+  z-index: 999999;
+}
+
+/* bold */
+.score{
+  font-weight: bold;
+}

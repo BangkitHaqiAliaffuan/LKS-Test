@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Particle Effect on Focus</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        height: 100vh;
+      }
+
+      .particle-btn {
+        position: absolute;
+        border: none;
+        padding: 16px 32px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #ff598c;
+        color: white;
+        z-index: 0;
+      }
+
+      .particle {
+        position: absolute;
+        transform: translate(50%, 50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: blue;
+        z-index: 9999;
+        top: 35%;
+        left: 40%;
+      }
+
+      .particle-left-middle {
+        animation: p-l-m 900ms forwards;
+      }
+      @keyframes p-l-m {
+        from {
+          opacity: 1;
+        }
+        to {
+          left: -40px;
+          opacity: 0;
+        }
+      }
+      .particle-left-up {
+        animation: p-l-u 900ms forwards;
+      }
+      @keyframes p-l-u {
+        from {
+          opacity: 1;
+        }
+        to {
+            top: -20px;
+          left: -40px;
+          opacity: 0;
+        }
+      }
+      .particle-left-down {
+        animation: p-l-d 900ms forwards;
+      }
+      @keyframes p-l-d {
+        from {
+          opacity: 1;
+        }
+        to {
+            top: 50px;
+          left: -40px;
+          opacity: 0;
+        }
+      }
+      .particle-right-up {
+        animation: p-r-u 900ms forwards;
+      }
+      @keyframes p-r-u {
+        from {
+          opacity: 1;
+        }
+        to {
+            top: -20px;
+            left: 150px;
+            opacity: 0;
+        }
+      }
+      .particle-right-down {
+        animation: p-r-d 900ms forwards;
+      }
+      @keyframes p-r-d {
+        from {
+          opacity: 1;
+        }
+        to {
+            top: 50px;
+          left: 150px;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="" class="particle-btn" tabindex="0">
+      Click Me!
+      <div class="particle particle-right-down"></div>
+      <div class="particle particle-left-up"></div>
+      <div class="particle particle-left-middle"></div>
+      <div class="particle particle-left-down"></div>
+      <div class="particle particle-right-up"></div>
+    </a>
+  </body>
+</html>

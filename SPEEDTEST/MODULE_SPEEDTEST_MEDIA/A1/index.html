@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html{
+        background-color: rgb(115, 115, 224);
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        display: flex;
+        height: 86vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .container-main {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .container-sub {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 600px;
+      }
+      .table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 300px;
+        border-radius: 20px;
+        height: 600px;
+        overflow: hidden;
+        border: 0.5px solid;
+        background-color: white;
+        box-shadow: 3px 3px 10px;
+      }
+      .title {
+        text-align: center;
+        padding: 20px;
+        width: 400px;
+        border-radius: 200px;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      .price {
+        background-color: rgb(38, 38, 224);
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 50px;
+        color: aliceblue;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .price span{
+        font-size: 20px;
+      }
+      .silver {
+        color: rgb(145, 145, 145);
+      }
+      .gold {
+        color: rgb(197, 178, 67);
+      }
+      .platinum {
+        color: #1a1512;
+      }
+      .desc{
+        width: 80%;
+        font-size: 15px;
+      }
+      .purchase{
+        text-align: center;
+        width: 80%;
+        background: rgb(0, 80, 228);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .purchase:hover{
+        background: white;
+        border: 1px solid;
+        color: rgb(0, 80, 228);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="table">
+        <div class="title silver">Silver Pack</div>
+        <div class="container-sub">
+          <div class="price">$4 <span> /month </span></div>
+          <div class="desc">
+            Deploy in seconds Scale up on demand Run any workload - from mission
+            critical apps to low traffic sites
+          </div>
+          <div class="purchase">Purchase</div>
+        </div>
+      </div>
+      <div class="table">
+        <div class="title gold">Gold Pack</div>
+        <div class="container-sub">
+          <div class="price">$12 <span> /month </span></div>
+          <div class="desc">
+            Simple, managed Kubernetes built for scale Free control plane, free
+            bandwidth allowance, and more Automate and optimize to peak
+            performance
+          </div>
+          <div class="purchase">Purchase</div>
+        </div>
+      </div>
+      <div class="table">
+        <div class="title platinum">Platinum Pack</div>
+        <div class="container-sub">
+          <div class="price">$30 <span> /month </span></div>
+          <div class="desc">
+            Build, deploy and scale apps quickly Fully managed solution, zero
+            infrastructure management Highly scalable
+          </div>
+          <div class="purchase">Purchase</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
